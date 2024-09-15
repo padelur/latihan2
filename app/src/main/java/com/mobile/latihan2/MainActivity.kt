@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var txtUsername : EditText
     private lateinit var txtPassword : EditText
     private lateinit var btnLogin : Button
+    private lateinit var btnloginpage : Button
+    private lateinit var btnListview : Button
+    private lateinit var  btnRecycle : Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btnLogin)
         txtUsername = findViewById(R.id.txtUsername)
         txtPassword = findViewById(R.id.txtPassword)
+        btnloginpage=findViewById(R.id.btnloginpage)
+        btnListview=findViewById(R.id.btnListview)
+        btnRecycle = findViewById(R.id.btnRecycle)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -31,6 +38,23 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        btnloginpage.setOnClickListener(){
+            val intentmenu2  = Intent(this@MainActivity, LoginPageActivity::class.java)
+            startActivity(intentmenu2)
+
+        }
+        btnListview.setOnClickListener(){
+            val intentmenu2  = Intent(this@MainActivity, ListView::class.java)
+            startActivity(intentmenu2)
+
+        }
+        btnRecycle.setOnClickListener() {
+            val intentMenu2 = Intent(
+                this@MainActivity,
+                RecycleView::class.java
+            )
+            startActivity(intentMenu2)
+        }
         btnLogin.setOnClickListener(){
             val userName = txtUsername.text.toString()
             val password = txtPassword.text.toString()

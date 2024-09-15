@@ -39,6 +39,25 @@
             android:layout_marginTop="25sp"
             android:gravity="center"
             android:text="Login" />
+
+        <Button
+            android:id="@+id/btnloginpage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="login page" />
+
+        <Button
+            android:id="@+id/btnListview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="listview" />
+
+        <Button
+            android:id="@+id/btnRecycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recycle View" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
